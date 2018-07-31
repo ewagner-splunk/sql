@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+QUERY="select o.name as \"Name\", o.slug as 'Org slug', o.created_on as \"Created\", case o.enabled when 1 then \"Enabled\" when 0 then \"Disabled\" end as \"Org status\", b.state as \"Billing State\", COUNT(m.user_id) as \"User Count\" from Organizations o join OrganizationMembers m on o.id = m.organization_id join Users u on u.id = m.user_id join OrganizationBilling b on b.organization_id = o.id join UserEmails e on e.user_id = u.id where e.email like \"%@splunk.com\" and o.slug not like \"%victorops%\" and o.slug not like \"%votest%\" and o.slug not like \"%vops%\" and o.slug not like \"baraels-blade\" and o.slug not like \"game-of-thrones\" and o.slug not like \"healthcheck\" and o.slug not like \"ops-learning\" and o.slug not like \"ops-testing\" and o.slug not like \"twiliohealth\" group by o.slug order by COUNT(m.user_id) desc"
+
+mysql -h coredb1.pr.den02.victorops.net -D vo_hier -u rouser -p -e "$QUERY"

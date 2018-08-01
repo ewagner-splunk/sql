@@ -35,6 +35,10 @@ Add the following lines to your bash profile.  You will need to change the direc
         function splunk_orgs() {
                 ./GitHub/sql/get_splunk_orgs.sh
                 }
+
+        function autopause() {
+                ./GitHub/sql/auto_paused_orgs.sh
+                }
 ```
 
 ### find_user
@@ -54,3 +58,6 @@ No arguments, just executed as `splunk_users`.  This will return a de-duped list
 
 ### splunk_orgs
 No arguments, just passed as `splunk_orgs`.  This will return relevant info (including current user count) for all Splunk orgs, with internal VictorOps orgs filtered out. Simply add an additional `and o.slug not like \"whatever\"` statement to eliminate any that creep in.
+
+### autopause
+No arguments, just passed as `autopause`.  This will return a list of any orgs who are currently auto-paused on ALertCore4.

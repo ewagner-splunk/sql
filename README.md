@@ -1,6 +1,6 @@
 # Perform Common SQL Queries Directly from the Terminal
 
-Requires [MySQL](https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/osx-installation.html)
+Requires MySQL client for the terminal.  If you have HomeBrew, install with `brew install caskroom/cask/mysql-shell`
 
 Fork this repo and clone it locally.
 

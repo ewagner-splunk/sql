@@ -1,6 +1,6 @@
 # Perform Common SQL Queries Directly from the Terminal
 
-Requires MySQL client for the terminal.  If you have HomeBrew, install with `brew install caskroom/cask/mysql-shell`
+Requires MySQL client for the terminal.  If you have HomeBrew, install with `brew install mysql`
 
 Fork this repo and clone it locally.
 

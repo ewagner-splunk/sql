@@ -67,5 +67,11 @@ No arguments, just executed as `splunk_users`.  This will return a de-duped list
 ### splunk_orgs
 No arguments, just passed as `splunk_orgs`.  This will return relevant info (including current user count) for all Splunk orgs, with internal VictorOps orgs filtered out. Simply add an additional `and o.slug not like \"whatever\"` statement to eliminate any that creep in.
 
+### splunk_orgs_enabled
+No arguments, just passed as `splunk_orgs_enabled`.  Same as above but it only shows currently enabled orgs. Simply add an additional `and o.slug not like \"whatever\"` statement to eliminate any that creep in.
+
 ### autopause
 No arguments, just passed as `autopause`.  This will return a list of any orgs who are currently auto-paused on ALertCore4.
+
+### overrides
+Takes 1 argument: the org slug.  Returns all active overrides in place for that org (both manual and scheduled) with all the relevant details.

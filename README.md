@@ -8,7 +8,45 @@ Add the following lines to your bash profile.  You will need to change the direc
 
 
 ```bash
-# Execute SQL script with argument“
+# Execute SQL script with argument
+        function find_user() {
+                ./GitHub/sql/find_user.sh $1
+                }
+
+        function find_org() {
+                ./GitHub/sql/find_org.sh $1
+                }
+
+        function get_admins() {
+                ./GitHub/sql/get_admins.sh $@
+                }
+
+        function incident() {
+                ./GitHub/sql/incident_audit.sh $1 $2
+                }
+        function poll_org() {
+                ./GitHub/sql/poll_org.sh $1
+                }
+
+        function splunk_users() {
+                ./GitHub/sql/get_splunk_users.sh
+                }
+
+        function splunk_orgs() {
+                ./GitHub/sql/get_splunk_orgs.sh
+                }
+
+        function autopause() {
+                ./GitHub/sql/auto_paused_orgs.sh
+                }
+
+        function overrides() {
+                ./GitHub/sql/show_overrides.sh $1
+                }
+
+        function splunk_orgs_enabled() {
+                ./GitHub/sql/get_enabled_splunk_orgs.sh
+                }
 ```
 
 ### find_user

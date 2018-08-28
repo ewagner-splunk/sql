@@ -2,9 +2,9 @@
 
 Requires MySQL client for the terminal.  If you have HomeBrew, install with `brew install mysql`
 
-Fork this repo and clone it locally.
+Clone this repo locally so you can take advantage of any updates.
 
-Add the following lines to your bash profile.  You will need to change the directory to match the directory where you cloned this repo.  (In the below example, the repo is `~/GitHub/sql`)
+Add the following lines to your bash profile.  You may need to change the directory to match the directory where you cloned this repo.  (In the below example, the repo is `~/GitHub/sql`)
 
 
 ```bash

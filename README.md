@@ -48,7 +48,7 @@ Add the following lines to your bash profile.  You may need to change the direct
                 ./GitHub/sql/get_enabled_splunk_orgs.sh
                 }
 
-		function country_code() {
+        function country_code() {
                 ./GitHub/sql/country_code.sh $1
                 }
 

@@ -48,7 +48,7 @@ Add the following lines to your bash profile.  You may need to change the direct
                 ./GitHub/sql/get_enabled_splunk_orgs.sh
                 }
 
-        function country_code() {
+        function phone() {
                 ./GitHub/sql/country_code.sh $1
                 }
 
@@ -81,5 +81,5 @@ No arguments, just passed as `autopause`.  This will return a list of any orgs w
 ### overrides
 Takes 1 argument: the org slug.  Returns all active overrides in place for that org (both manual and scheduled) with all the relevant details.
 
-### country_code
-Takes one argument: country code in format "+#" (For example, pass `country_code +48` for Poland).  Returns a list of all users with phone numbers using that country code.  (How many users do we have with Polish phone numbers?)
+### phone
+Takes one argument: All or part (country code) of a phone number For example, pass `country_code +48` for all users with a Polish phone number or pass `phone 555-555-5555` to find the user with that number.  Returns a list of all users with phone numbers using that country code.  (How many users do we have with Polish phone numbers?)

@@ -52,6 +52,23 @@ Add the following lines to your bash profile.  You may need to change the direct
                 ./GitHub/sql/country_code.sh $1
                 }
 
+        function find_domain() {
+                ./GitHub/sql/find_domain.sh $1
+                }
+
+        function essentials() {
+                ./GitHub/sql/essentials_org_slugs.sh
+                }
+
+        function full_stack() {
+                ./GitHub/sql/full_stack_org_slugs.sh
+                }
+
+        function free_orgs() {
+                ./GitHub/sql/free_org_slugs.sh
+                }
+
+
 ```
 
 ### find_user

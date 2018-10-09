@@ -68,6 +68,9 @@ Add the following lines to your bash profile.  You may need to change the direct
                 ./GitHub/sql/free_org_slugs.sh
                 }
 
+        function trials_since() {
+                ./GitHub/sql/trials_since_date.sh $1
+                }
 
 ```
 
@@ -100,3 +103,18 @@ Takes 1 argument: the org slug.  Returns all active overrides in place for that 
 
 ### phone
 Takes one argument: All or part (country code) of a phone number For example, pass `country_code +48` for all users with a Polish phone number or pass `phone 555-555-5555` to find the user with that number.  Returns a list of all users with phone numbers using that country code.  (How many users do we have with Polish phone numbers?)
+
+### find_domain
+Takes 1 argument: an email domain (like 'splunk.com').  This will return all orgs in which a member of that org has an email address with that domain.
+
+### essentials
+No arguments.  Returns a sequence of org slugs with the "essentials" package, sandwiched by double quotes and separated by commas.
+
+### full_stack
+No arguments.  Returns a sequence of org slugs with the "full stack" package, sandwiched by double quotes and separated by commas.
+
+### free_orgs
+No arguments.  Returns a sequence of org slugs with the "free" package, sandwiched by double quotes and separated by commas.
+
+### trials_since
+Takes 1 argument: date / time.  Returns a sequence of org slugs for all new trials created after the provided date/time, sandwiched by double quotes and separated by commas.  The date/time format of the argument must conform to the format used in the vo_hier.Organizations.created_on column.  YYYY-MM-DD HH:MM:SS)

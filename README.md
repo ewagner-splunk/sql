@@ -72,6 +72,10 @@ Add the following lines to your bash profile.  You may need to change the direct
                 ./GitHub/sql/trials_since_date.sh $1
                 }
 
+        function find_team() {
+                ./GitHub/sql/find_team_slug.sh $1
+                }
+
 ```
 
 ### find_user
@@ -118,3 +122,6 @@ No arguments.  Returns a sequence of org slugs with the "free" package, sandwich
 
 ### trials_since
 Takes 1 argument: date / time.  Returns a sequence of org slugs for all new trials created after the provided date/time, sandwiched by double quotes and separated by commas.  The date/time format of the argument must conform to the format used in the vo_hier.Organizations.created_on column.  YYYY-MM-DD HH:MM:SS)
+
+### find_team
+Takes 1 argument: team slug.  Returns org name, org slug, team name, team slug.

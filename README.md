@@ -76,6 +76,10 @@ Add the following lines to your bash profile.  You may need to change the direct
                 ./GitHub/sql/find_team_slug.sh $1
                 }
 
+        function find_escalation_policy() {
+                ./GitHub/sql/find_escalation_policy_slug.sh $1
+                }
+
 ```
 
 ### find_user
@@ -125,3 +129,6 @@ Takes 1 argument: date / time.  Returns a sequence of org slugs for all new tria
 
 ### find_team
 Takes 1 argument: team slug.  Returns org name, org slug, team name, team slug.
+
+### find_escalation_policy
+Takes 1 argument: escalation policy slug.  Returns org name, org slug, escalation policy name, escalation policy slug.

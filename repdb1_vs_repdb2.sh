@@ -2513,4 +2513,4 @@ else
 	printf "\nNo difference found\n"
 fi
 
-printf "\n\n========================================\n Table: 
+printf "========= PROCESS COMPLETE ========="
